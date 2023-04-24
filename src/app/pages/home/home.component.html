@@ -1,0 +1,46 @@
+
+<div _ngcontent-oyj-c17 class="side_bg">
+    <div _ngcontent-oyj-c17 class="text">
+        <h6 _ngcontent-oyj-c17 class="text-white fw-800 f-40"> ExamIdea </h6>
+        <p _ngcontent-oyj-c17 class="text-white">ُExam management made easy</p>
+        <p _ngcontent-oyj-c17 class="text-white">Test your skills with a quick quiz</p>
+    </div>
+</div>
+
+<div _ngcontent-oyj-c17 class="content">
+    <div _ngcontent-oyj-c17 class="form_area">
+        <div _ngcontent-oyj-c17 class="top text-center">
+            <img src="../../../assets/logo.png" alt>
+            <br _ngcontent-oyj-c17 />
+            <span _ngcontent-oyj-c17 class="font-weight-bold f-16 text-app-secondary">Exam BestIdea</span>
+            <h6 _ngcontent-oyj-c17 class="f-16 mt-3">Sign in to Your Account</h6>
+        </div>
+        <form (ngSubmit)="formSubmit()" _ngcontent-oyj-c17>
+            <div _ngcontent-oyj-c17>
+                <div _ngcontent-oyj-c17 class="group col-12">
+                    <input [(ngModel)]="loginData.username"
+                    name="username"
+                    required _ngcontent-oyj-c17 type="text" id="username" name="username" placeholder="Email username">
+                    <input [(ngModel)]="loginData.password"
+                    name="password"
+                    type="password" required _ngcontent-oyj-c17 id="password" name="password" placeholder="Email password">
+
+                    <button class="bg-app-secondary text-white btn w-100 mt20"> Sign In</button>
+                        <!--{{ loginData | json}}-->
+
+                </div>
+            </div>
+        </form>
+        <footer _ngcontent-oyj-c17 class="text-center f-14">
+            <div _ngcontent-oyj-c17 class="mb-3">
+                <span _ngcontent-oyj-c17 class="text-app-secondary">Not yet registered on Examportal?</span>
+                <span _ngcontent-oyj-c17 [routerLink]="'/signup'" class="cursor ml-2 text-app-primary">Register</span>
+            </div>
+            <span _ngcontent-oyj-c17> Support: 
+                <a _ngcontent-oyj-c17 href="tel:+" class="text-app-primary ml-1">963932329731</a>
+                or 
+                <a _ngcontent-xfs-c12="" href="tel:+ 07066507116" class="ml-1 text-app-primary">963932329731</a>
+            </span>
+        </footer>
+    </div>
+</div>

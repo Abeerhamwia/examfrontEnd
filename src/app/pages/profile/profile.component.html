@@ -1,0 +1,50 @@
+<mat-card *ngIf="user">
+    <h3>Your Profile Details</h3>
+    <!--- {{ user | json }} --->
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+
+            <div class="container">
+
+                <div class="container text-center">
+                    <img src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
+                        alt="" class="profile-image" />
+                    <h1 class="mt20">{{ user.firstName + " " + user.lastName }}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!---//table Details--->
+                        <table class="table text-center">
+                            <tr>
+                                <td>User name</td>
+                                <td>{{ user.username }}</td>
+                            </tr>
+                            <tr>
+                                <td>User Id</td>
+                                <td>{{ user.id }}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{ user.phone }}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{ user.authorities[0].authority }}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{ user.enabled?"ACTIVE":"DEACTIVATE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+</mat-card>
